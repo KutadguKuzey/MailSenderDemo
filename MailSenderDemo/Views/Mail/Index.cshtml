@@ -1,0 +1,21 @@
+﻿@model MailSenderDemo.Models.MailRequest
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Yeni Mail Gönderme Sayfası</h1>
+<form method="post">
+    <div class="form-group">
+        @Html.Label("Alıcı Mail Adresi")
+        <input type="text" asp-for="ReceiverMail" class="form-control" />
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.Label("Konu Başlığı")
+        <input type="text" asp-for="Subject" class="form-control" />
+    </div>
+    <br />
+
+    <button class="btn btn-outline-primary">Mail Gönder</button>
+</form>
+
